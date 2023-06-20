@@ -28,6 +28,7 @@ echo '[[ $commands[kubectl] ]] && source <(kubectl completion zsh)' >> ~/.zshrc 
 ```sh
 complete -o default -F __start_kubectl k # Configura o autocompletar para o comando 'k' usando a função '__start_kubectl'.
 alias k='kubectl'  # Abreviação para o comando 'kubectl' como 'k'.
+alias kdry="kubectl --dry-run=client -o yaml" # Alias para executar o comando "kubectl --dry-run=client -o yaml"
 alias kgp='kubectl get pods'  # Atalho para 'kubectl get pods'.
 alias kgs='kubectl get services'  # Atalho para 'kubectl get services'.
 alias knd='kubectl describe'  # Atalho para 'kubectl describe'.

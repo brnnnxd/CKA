@@ -4,7 +4,7 @@
 
 Criar um pod com nome `nginx-pod` usando a imagem `nginx:alpine`
 <details>
-  <summary><b>Resposta</b> <em>(clique para ver a resposta)</em></summary>
+  <summary><b>Resposta</b></summary>
 
 - Nesse caso, temos duas formas.
 
@@ -25,12 +25,14 @@ k create -f quest-1.yaml
 
 </details>
 
+---
+
 ### Questão 2
 
 Realizar o deploy de um pod com nome de `messaging` usando a imagem `redis:alpine` com o labels `tier=msg`.  
 
 <details>
-  <summary><b>Resposta</b> <em>(clique para ver a resposta)</em></summary>
+  <summary><b>Resposta</b></summary>
 1. Utilizando somente a linha de comando:
 
 ```sh
@@ -54,11 +56,13 @@ k get po
 
 </details>
 
+---
+
 ### Questão 3
 
 Realize a criação de um namespace com nome de `aptx-1020`.
 <details>
-  <summary><b>Resposta</b> <em>(clique para ver a resposta)</em></summary>
+  <summary><b>Resposta</b></summary>
 
 1. Utilizando linha de comando para criar o namespace:
 
@@ -74,12 +78,14 @@ k get ns
 
 </details>
 
+---
+
 ### Questão 4
 
 Obtenha a lista de nodes no formato `JSON`, armazenar em um arquivo no diretório `/opt/outputs/nodes-xpto.json`.
 
 <details>
-  <summary><b>Resposta</b> <em>(clique para ver a resposta)</em></summary>
+  <summary><b>Resposta</b></summary>
 
 1. Utilizando linha de comando para criar o arquivo com o output do `k get no -o json`:
 
@@ -95,12 +101,14 @@ cat /opt/outputs/nodes-xpto.json
 
 </details>
 
+---
+
 ### Questão 5
 
 Criar um servico `messaging-service` para expor a porta `6379` do pod `messaging`
 
 <details>
-  <summary><b>Resposta</b> <em>(clique para ver a resposta)</em></summary>
+  <summary><b>Resposta</b></summary>
 
 1. Utilizando linha de comando:
 
@@ -118,12 +126,14 @@ k describe svc messaging-service
 
 </details>
 
+---
+
 ### Questão 6
 
 Criar um `Implantação(deployment)` com nome `web-app` usando a imagem `nginx:alpine` com `2` replicas.
 
 <details>
-  <summary><b>Resposta</b> <em>(clique para ver a resposta)</em></summary>
+  <summary><b>Resposta</b></summary>
 
 - Nesse caso, temos duas formas.
 
@@ -150,12 +160,14 @@ k get deploy
 
 </details>
 
+---
+
 ### Questão 7
 
 Criar um pod statico com nome `static-busybox` no controlplane node, usando a imagem `busybox` com o command `sleep 1000`.
 
 <details>
-  <summary><b>Resposta</b> <em>(clique para ver a resposta)</em></summary>
+  <summary><b>Resposta</b></summary>
 
 - Nesse caso, temos duas formas.
 
@@ -182,12 +194,14 @@ k describe po static-busybox
 
 </details>
 
+---
+
 ### Questão 8
 
 Criar um pod no namespace `financeiro` com nome `temp-bus` com a imagem  `redis:alpine`.
 
 <details>
-  <summary><b>Resposta</b> <em>(clique para ver a resposta)</em></summary>
+  <summary><b>Resposta</b></summary>
 
 1. Utilizando linha de comando:
 
@@ -204,6 +218,8 @@ k describe po temp-bus -n financeiro
 
 </details>
 
+---
+
 ### Questão 9
 
 Expor o deployment `web-app` criando um servico com nome `web-app-service` para expor a porta `30082` para o nodes do cluster.
@@ -211,7 +227,7 @@ Expor o deployment `web-app` criando um servico com nome `web-app-service` para 
 A aplicacao esta ouvindo na porta `8080`.
 
 <details>
-  <summary><b>Resposta</b> <em>(clique para ver a resposta)</em></summary>
+  <summary><b>Resposta</b></summary>
 
 1. Utilizando linha de comando:
 
@@ -231,12 +247,14 @@ k describe svc web-app-service
 
 </details>
 
+---
+
 ### Questão 10
 
 Use a consulta JSON PATH para recuperar o `osImage` de todos os nodes e armazene em um arquivo em `/opt/ooutputs/nodes_os_xpto.txt`.
 
 <details>
-  <summary><b>Resposta</b> <em>(clique para ver a resposta)</em></summary>
+  <summary><b>Resposta</b></summary>
 
 1. Utilizando linha de comando:
 
@@ -253,6 +271,8 @@ cat /opt/ooutputs/nodes_os_xpto.txt
 
 </details>
 
+---
+
 ### Questão 11
 
 Crie um `Persistent Volume` com as especificacoes abaixo
@@ -263,7 +283,7 @@ modo de acesso: `ReadWriteMany`
 Host Path: `/pv/data/analytics`
 
 <details>
-  <summary><b>Resposta</b> <em>(clique para ver a resposta)</em></summary>
+  <summary><b>Resposta</b></summary>
 
 1. Utilizando linha de comando:
 Criado um arquivo apartir da documentacao [Link](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
@@ -295,3 +315,5 @@ k get pv
 ```
 
 </details>
+
+---
