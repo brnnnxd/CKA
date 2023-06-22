@@ -362,3 +362,23 @@ k get nodes --kubeconfig /root/CKA/super.kubeconfig # validar o erro.
 </details>
 
 ---
+
+### Questão 9
+
+Foi criado um novo deployment chamado `nginx-deeploy`. escale o deployment para 3 replicas. A replica aumentou? corriga o problema. 
+
+<details>
+  <summary><b>Resposta</b></summary>
+
+- Utilizando linha de comando:
+
+```sh
+k get deployment
+k scale deployment nginx-deploy --replicas=3
+k describe deployment
+vim /etc/kubernetes/manifests/kube-controller-manager.yaml #no exemplo o nome estava kube-contro1ler-manager necessario ajustar para kube-controller-manager
+```
+
+</details>
+
+---
